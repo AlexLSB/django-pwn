@@ -28,7 +28,7 @@ Quickstart
 
 Install django-pwn::
 
-    pip install django-pwn
+    pip install git+https://github.com/AlexLSB/django-pwn.git
 
 Then use it in a project::
 
