@@ -94,6 +94,8 @@ And getting the result when it's ready:
 
 To get a list of orders:
 
+.. code-block:: python
+
     from django_pwn import PWNClient
 
     cli = PWNClient()
