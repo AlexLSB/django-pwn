@@ -42,14 +42,16 @@ In order to use the application, add `django_pwn` to your INSTALLED_APPS in your
         ...
     )
 
-Setup the Open Exchange Rates backend
+Settings
 -------------------------------------
 
 Open an account at https://pwnhealth.com/ if you don't have one already. Then, add this to your project's settings::
 
     DJANGO_MONEY_RATES = {
-        'api_key': 'pwn_api_key',
-        'api_token': 'PwNaPiToKeN',
+        'API_KEY': 'pwn_api_key',
+        'API_TOKEN': 'PwNaPiToKeN',
+        'PWN_HOST': 'staging_or_prod_PWNHost',
+        'PWN_API': '52.XX.XX.XX',
     }
 
 For more information on the PWN API, see https://api-docs-labs-module.pwnhealth.com/
@@ -58,15 +60,46 @@ For more information on the PWN API, see https://api-docs-labs-module.pwnhealth.
 Convert from one currency to another
 ------------------------------------
 
-Here's an example of converting 10 Euros to Brazilian Reais:
+Here's an example of creating an order:
 
 .. code-block:: python
 
-    from django_pwn import PWNCustomer
-    customer = PWNCustomer(
-        name=
+    from django_pwn.models import PWNOrder
+
+    pwn_order = PWNOrder(
+        first_name= ... ,
+        last_name= ... ,
+        gender= ... ,
+        dob= ... ,
+        state= ... ,
+        test_types= ... ,
+        work_phone= ... ,
+        city= ... ,
+        zip_code= ... ,
+        address= ... ,
+        email= ... ,
+        order_id= ... ,
     )
-    customer.
+    pwn_order.create()
+
+And getting the result when it's ready:
+
+.. code-block:: python
+
+    from django_pwn.models import PWNOrder
+
+    pwn_order = PWNOrder.objects.get( ... )
+    results = pwn_order.fetch_results()
+
+
+To get a list of orders:
+
+    from django_pwn import PWNClient
+
+    cli = PWNClient()
+
+    orders = cli.get_customers()
+
 
 Features
 --------
