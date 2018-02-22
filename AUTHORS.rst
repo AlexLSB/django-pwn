@@ -6,4 +6,4 @@ Developers
 ----------------
 
 * Alex Kondrashev <plessis@mail.ru>
-* Oleg Polyudov <air@live.ri>
+* Oleg Polyudov <air@live.ru>
