@@ -195,7 +195,7 @@ latex_elements = {
 # (source start file, target name, title, author, documentclass [howto/manual]).
 latex_documents = [
   ('index', 'django-pwn.tex', u'django-pwn Documentation',
-   u'Federico Frenguelli', 'manual'),
+   u'Alex K', 'manual'),
 ]
 
 # The name of an image file (relative to this directory) to place at the top of
@@ -225,7 +225,7 @@ latex_documents = [
 # (source start file, name, description, authors, manual section).
 man_pages = [
     ('index', 'django-pwn', u'django-pwn Documentation',
-     [u'Federico Frenguelli'], 1)
+     [u'Alex K'], 1)
 ]
 
 # If true, show URL addresses after external links.
@@ -239,7 +239,7 @@ man_pages = [
 #  dir menu entry, description, category)
 texinfo_documents = [
   ('index', 'django-pwn', u'django-pwn Documentation',
-   u'Federico Frenguelli', 'django-pwn', 'One line description of project.',
+   u'Alex K', 'django-pwn', 'PWN API integration for Django.',
    'Miscellaneous'),
 ]
 
